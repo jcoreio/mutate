@@ -1,5 +1,5 @@
 {
-  "name": "mutate",
+  "name": "@jcoreio/mutate",
   "version": "0.0.0-development",
   "description": "a few immutable.js-like mutation functions for plain objects",
   "main": "lib/index.js",
@@ -80,5 +80,8 @@
     "nyc": "^11.0.0",
     "rimraf": "^2.6.0",
     "semantic-release": "^11.0.0"
+  },
+  "dependencies": {
+    "iterall": "^1.1.3"
   }
 }

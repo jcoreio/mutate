@@ -1,4 +1,9 @@
 /* @flow */
 
-/* eslint-disable no-console, no-undef */
-console.log('Hello world!')
+import setIn from './setIn'
+import updateIn from './updateIn'
+
+export {
+  setIn,
+  updateIn,
+}

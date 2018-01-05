@@ -1,4 +1,4 @@
-# mutate
+# @jcoreio/mutate
 
 [![Build Status](https://travis-ci.org/jcoreio/mutate.svg?branch=master)](https://travis-ci.org/jcoreio/mutate)
 [![Coverage Status](https://codecov.io/gh/jcoreio/mutate/branch/master/graph/badge.svg)](https://codecov.io/gh/jcoreio/mutate)
@@ -7,9 +7,22 @@
 
 a few immutable.js-like mutation functions for plain objects
 
-## Usage
+Beware of using Ramda.js!  [It always returns a new object, even if nothing changed!](https://github.com/ramda/ramda/issues/2429)
+
+# Usage
 
 ```sh
-npm install --save mutate
+npm install --save @jcoreio/mutate
 ```
 
+# API
+
+## `setIn(obj: any, path: Iterable<any>, newValue: any): any`
+
+Works just like [`setIn` from Immutable.js](https://facebook.github.io/immutable-js/docs/#/setIn)
+but operates on nested JS Objects and Arrays.
+
+## `updateIn(obj: any, path: Iterable<any>, [notSetValue: any], updater: (value: any) => any): any`
+
+Works just like [`updateIn` from Immutable.js](https://facebook.github.io/immutable-js/docs/#/setIn)
+but operates on nested JS Objects and Arrays.

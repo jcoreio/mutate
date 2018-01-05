@@ -44,6 +44,7 @@
   "keywords": [
     "immutable",
     "deep",
+    "json",
     "mutations",
     "update",
     "updateIn",

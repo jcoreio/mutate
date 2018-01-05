@@ -42,7 +42,12 @@
     "url": "https://github.com/jcoreio/mutate.git"
   },
   "keywords": [
-    "es2015"
+    "immutable",
+    "deep",
+    "mutations",
+    "update",
+    "updateIn",
+    "setIn"
   ],
   "author": "Andy Edwards",
   "license": "MIT",

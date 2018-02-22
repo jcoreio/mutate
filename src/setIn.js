@@ -2,7 +2,7 @@
 
 import updateIn from './updateIn'
 
-function setIn<T: Object>(obj: T, path: Array<any>, newValue: any): T {
+function setIn<T: Object>(obj: T, path: Iterable<any>, newValue: any): T {
   return updateIn(obj, path, () => newValue)
 }
 

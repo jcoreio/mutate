@@ -2,7 +2,8 @@
   "extends": [
     "@jedwards1211/eslint-config", "@jedwards1211/eslint-config-flow"
   ],
+  "parser": "babel-eslint",
   "env": {
-    "commonjs": true
+    "es6": true
   }
 }

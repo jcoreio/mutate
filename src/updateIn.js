@@ -30,7 +30,7 @@ function updateIn<T>(obj: T, path: Iterable<any>): T {
   try {
     return helper(obj, true)
   } finally {
-    if (!iteratorNormalCompletion && typeof iterator.return === 'function') iterator.return()
+    if (!iteratorNormalCompletion && typeof (iterator: any).return === 'function') (iterator: any).return()
   }
 }
 

@@ -2,7 +2,7 @@
 
 import {getIterator} from 'iterall'
 
-function updateIn<T>(obj: T, path: Iterable<any>): T {
+function _updateIn<T>(obj: T, path: Iterable<any>): T {
   const notSetValue = arguments.length === 4 ? arguments[2] : undefined
   const updater = arguments.length === 4 ? arguments[3] : arguments[2]
 
@@ -37,6 +37,8 @@ function updateIn<T>(obj: T, path: Iterable<any>): T {
 type UpdateIn = (
   (<T>(obj: T, path: Iterable<any>, notSetValue: any, updater: (value: any) => any) => T) &
   (<T>(obj: T, path: Iterable<any>, updater: (value: any) => any) => T)
-)
+  )
 
-module.exports = ((updateIn: any): UpdateIn)
+const updateIn: UpdateIn = (_updateIn: any)
+
+export default updateIn

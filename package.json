@@ -103,7 +103,7 @@
     "mocha": "^4.1.0",
     "nyc": "^11.4.1",
     "rimraf": "^2.6.0",
-    "semantic-release": "^15.8.1"
+    "semantic-release": "^15.10.6"
   },
   "dependencies": {
     "iterall": "^1.1.3"

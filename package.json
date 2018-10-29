@@ -6,6 +6,14 @@
   "module": "es/index.js",
   "modules.root": "es",
   "sideEffects": false,
+  "files": [
+    "*.js",
+    "*.js.flow",
+    "es",
+    "LICENSE.md",
+    "README.md",
+    "yarn.lock"
+  ],
   "scripts": {
     "lint": "eslint src test --cache",
     "lint:fix": "eslint --fix src test --cache",

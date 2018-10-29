@@ -4,3 +4,6 @@ node_modules
 lib
 es
 .eslintcache
+.idea
+*.js
+*.js.flow

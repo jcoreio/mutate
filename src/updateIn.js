@@ -10,16 +10,17 @@ function _updateIn<T>(obj: T, path: Iterable<any>): T {
   let iteratorNormalCompletion = false
 
   function helper(obj: any, isSet: boolean): any {
-    const {value: key, done} = iterator.next()
+    const {value: _key, done} = iterator.next()
     iteratorNormalCompletion = done
     if (done) {
       return updater(isSet ? obj : notSetValue)
     }
+    const key: any = _key
     if (!(obj instanceof Object)) {
       throw new Error('the given path does not exist in the object')
     }
     const oldValue = obj[key]
-    const newValue = helper(oldValue, (key: any) in obj)
+    const newValue = helper(oldValue, key in obj)
     if (newValue === oldValue) return obj
     if (Array.isArray(obj)) {
       return [...obj.slice(0, key), newValue, ...obj.slice(key + 1)]

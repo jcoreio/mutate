@@ -1,9 +1,4 @@
 coverage
 .nyc_output
 node_modules
-lib
-es
-.eslintcache
-.idea
-*.js
-*.js.flow
+dist

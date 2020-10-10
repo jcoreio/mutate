@@ -18,8 +18,8 @@
     "json",
     "mutations",
     "update",
-    "updateIn",
-    "setIn"
+    "update-in",
+    "set-in"
   ],
   "author": "Andy Edwards",
   "license": "MIT",

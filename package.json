@@ -28,8 +28,9 @@
   },
   "homepage": "https://github.com/jcoreio/mutate#readme",
   "devDependencies": {
-    "@jedwards1211/js-toolchain": "^1.0.8",
-    "flow-bin": "^0.135.0"
+    "@jedwards1211/js-toolchain": "^1.1.0",
+    "flow-bin": "^0.135.0",
+    "husky": "^4.3.0"
   },
   "dependencies": {
     "iterall": "^1.1.3"
@@ -44,6 +45,7 @@
   "scripts": {
     "test": "toolchain test",
     "prepublishOnly": "echo This package is meant to be published by semantic-release from the dist build directory. && exit 1",
-    "install-husky": "node node_modules/husky/husky.js install"
+    "tc": "toolchain",
+    "toolchain": "toolchain"
   }
 }

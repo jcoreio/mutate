@@ -23,12 +23,12 @@ jobs:
 
       - run:
           name: build
-          command: toolchain prepublishOnly
+          command: yarn toolchain prepublishOnly
 
       - run:
           name: upload coverage
-          command: toolchain codecov
+          command: yarn toolchain codecov
 
       - run:
           name: release
-          command: toolchain release
+          command: yarn toolchain release

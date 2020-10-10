@@ -1,2 +1,4 @@
 /* eslint-env node */
-module.exports = require('@jedwards1211/js-toolchain/.eslintrc.js')
+module.exports = {
+  extends: [require.resolve('@jedwards1211/js-toolchain/.eslintrc.js')],
+}

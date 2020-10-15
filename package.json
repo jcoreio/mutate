@@ -28,8 +28,7 @@
   },
   "homepage": "https://github.com/jcoreio/mutate#readme",
   "devDependencies": {
-    "@jedwards1211/js-toolchain": "^1.1.0",
-    "flow-bin": "^0.135.0",
+    "@jedwards1211/js-toolchain": "^2.0.0",
     "husky": "^4.3.0"
   },
   "dependencies": {
@@ -37,13 +36,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "toolchain pre-commit",
-      "commit-msg": "toolchain commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
   },
   "scripts": {
     "test": "toolchain test",

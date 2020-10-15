@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/jcoreio/mutate#readme",
   "devDependencies": {
-    "@jedwards1211/js-toolchain": "^2.0.0",
+    "@jedwards1211/js-toolchain": "^2.0.6",
     "husky": "^4.3.0"
   },
   "dependencies": {

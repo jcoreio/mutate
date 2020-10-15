@@ -1082,9 +1082,9 @@
   integrity sha512-PSHzMSQJ/t7OuZGdigIzz6EW+yoncZKFQQyvYLY88o1NOU0AowGambLyzJC59tiIncQ8wY+rFtpigPBta5ttYg==
 
 "@jedwards1211/js-toolchain@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@jedwards1211/js-toolchain/-/js-toolchain-2.0.1.tgz#5cf401d412d36b0232629503086c418e9f0d7278"
-  integrity sha512-NS8MhmRlLsjVvF1J+GzrSrQmzqD+R/VDTqF0ehRjglNJIdM7gfwiVNmmCea1b8UoAeeCjAnrEKLu8bcKqZ5uxQ==
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@jedwards1211/js-toolchain/-/js-toolchain-2.0.2.tgz#251d1be011685b4f0dbc7bd4e73baac722bc5299"
+  integrity sha512-Lvld1R+AWhmg3MkEseFvKPEwKOmY23Fh7UI6Y32u6EnJkbtdwMHvJCRz8Ht+jF84djqb/G9sIdobsyynmaoacg==
   dependencies:
     "@babel/core" "^7.12.0"
     "@babel/plugin-proposal-class-properties" "^7.10.4"
@@ -5507,9 +5507,9 @@ node-preload@^0.2.1:
     process-on-spawn "^1.0.0"
 
 node-releases@^1.1.61:
-  version "1.1.61"
-  resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.61.tgz#707b0fca9ce4e11783612ba4a2fcba09047af16e"
-  integrity sha512-DD5vebQLg8jLCOzwupn954fbIiZht05DAZs0k2u8NStSe6h9XdsuIQL8hSRKYiU8WUQRznmSDrKGbv3ObOmC7g==
+  version "1.1.63"
+  resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.63.tgz#db6dbb388544c31e888216304e8fd170efee3ff5"
+  integrity sha512-ukW3iCfQaoxJkSPN+iK7KznTeqDGVJatAEuXsJERYHa9tn/KaT5lBdIyxQjLEVTzSkyjJEuQ17/vaEjrOauDkg==
 
 nopt@^4.0.1, nopt@^4.0.3:
   version "4.0.3"

@@ -1,10 +1,6 @@
-// @flow
-
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-
 import { setIn } from '../src'
-
 describe('setIn', () => {
   it('returns updated copy if value is different', () => {
     expect(

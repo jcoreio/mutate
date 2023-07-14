@@ -1,10 +1,6 @@
-// @flow
-
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-
 import { updateIn } from '../src'
-
 describe('updateIn', () => {
   it('returns updated copy if value is different', () => {
     expect(
@@ -17,7 +13,7 @@ describe('updateIn', () => {
           f: 1,
         },
         ['a', 'b', 0],
-        (v) => v + 5
+        (v: any) => v + 5
       )
     ).to.deep.equal({
       a: {
@@ -42,7 +38,7 @@ describe('updateIn', () => {
         },
         ['a', 'b', 'g'],
         5,
-        (v) => v + 5
+        (v: any) => v + 5
       )
     ).to.deep.equal({
       a: {
@@ -64,11 +60,15 @@ describe('updateIn', () => {
       },
       f: 1,
     }
-    expect(updateIn(obj, ['a', 'b', 0], (v) => v)).to.equal(obj)
+    expect(updateIn(obj, ['a', 'b', 0], (v: any) => v)).to.equal(obj)
   })
   it('throws an error if the path does not exist in the object', () => {
     expect(() =>
-      updateIn({ foo: { bar: 'baz' } }, ['foo', 'bar', 'baz', 'qux'], (v) => v)
+      updateIn(
+        { foo: { bar: 'baz' } },
+        ['foo', 'bar', 'baz', 'qux'],
+        (v: any) => v
+      )
     ).to.throw(Error)
   })
 })

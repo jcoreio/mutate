@@ -32,12 +32,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.6",
-    "@jcoreio/toolchain": "1.0.0-beta.10",
-    "@jcoreio/toolchain-circle": "1.0.0-beta.10",
-    "@jcoreio/toolchain-esnext": "1.0.0-beta.10",
-    "@jcoreio/toolchain-mocha": "1.0.0-beta.10",
-    "@jcoreio/toolchain-semantic-release": "1.0.0-beta.10",
-    "@jcoreio/toolchain-typescript": "1.0.0-beta.10",
+    "@jcoreio/toolchain": "1.0.0",
+    "@jcoreio/toolchain-circle": "1.0.0",
+    "@jcoreio/toolchain-esnext": "1.0.0",
+    "@jcoreio/toolchain-mocha": "1.0.0",
+    "@jcoreio/toolchain-semantic-release": "1.0.0",
+    "@jcoreio/toolchain-typescript": "1.0.0",
     "iterall": "^1.1.3"
   },
   "publishConfig": {

@@ -1,6 +1,15 @@
 import { getIterator } from 'iterall'
 
-function _updateIn<T>(obj: T, path: Iterable<any>, ...rest: any[]): T {
+function updateIn<T>(obj: T, path: Iterable<any>): T
+function updateIn<T>(obj: T, path: Iterable<any>, notSetValue: any): T
+function updateIn<T>(
+  obj: T,
+  path: Iterable<any>,
+  notSetValue: any,
+  updater: (value?: any) => any
+): T
+
+function updateIn<T>(obj: T, path: Iterable<any>, ...rest: any[]): T {
   const notSetValue = rest.length === 2 ? rest[0] : undefined
   const updater = rest.length === 2 ? rest[1] : rest[0]
   const iterator: Iterator<any> = getIterator(path)
@@ -42,12 +51,4 @@ function _updateIn<T>(obj: T, path: Iterable<any>, ...rest: any[]): T {
   }
 }
 
-type UpdateIn = (<T>(
-  obj: T,
-  path: Iterable<any>,
-  notSetValue: any,
-  updater: (value?: any) => any
-) => T) &
-  (<T>(obj: T, path: Iterable<any>, updater: (value?: any) => any) => T)
-const updateIn: UpdateIn = _updateIn as any
 export default updateIn

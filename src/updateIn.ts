@@ -1,17 +1,12 @@
 import { getIterator } from 'iterall'
 
-function updateIn<T>(obj: T, path: Iterable<any>): T
-function updateIn<T>(obj: T, path: Iterable<any>, notSetValue: any): T
 function updateIn<T>(
   obj: T,
   path: Iterable<any>,
-  notSetValue: any,
-  updater: (value?: any) => any
-): T
-
-function updateIn<T>(obj: T, path: Iterable<any>, ...rest: any[]): T {
-  const notSetValue = rest.length === 2 ? rest[0] : undefined
-  const updater = rest.length === 2 ? rest[1] : rest[0]
+  notSetValue?: any,
+  updater?: (value?: any) => any
+): T {
+  updater = updater || notSetValue
   const iterator: Iterator<any> = getIterator(path)
   let iteratorNormalCompletion = false
 
@@ -20,7 +15,7 @@ function updateIn<T>(obj: T, path: Iterable<any>, ...rest: any[]): T {
     iteratorNormalCompletion = !!done
 
     if (done) {
-      return updater(isSet ? obj : notSetValue)
+      return updater?.(isSet ? obj : notSetValue)
     }
 
     const key: any = _key

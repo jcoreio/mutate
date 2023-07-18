@@ -3,10 +3,24 @@ import { getIterator } from 'iterall'
 function updateIn<T>(
   obj: T,
   path: Iterable<any>,
-  notSetValue?: any,
+  updater: (value?: any) => any
+): T
+function updateIn<T>(
+  obj: T,
+  path: Iterable<any>,
+  notSetValue: any,
+  updater: (value?: any) => any
+): T
+function updateIn<T>(
+  obj: T,
+  path: Iterable<any>,
+  notSetValue: any,
   updater?: (value?: any) => any
 ): T {
-  updater = updater || notSetValue
+  if (!updater) {
+    updater = notSetValue
+    notSetValue = undefined
+  }
   const iterator: Iterator<any> = getIterator(path)
   let iteratorNormalCompletion = false
 

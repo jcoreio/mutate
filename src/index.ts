@@ -1,5 +1,3 @@
-/* @flow */
-
 import setIn from './setIn'
 import updateIn from './updateIn'
 

@@ -3,11 +3,6 @@
   "version": "0.0.0-development",
   "description": "a few immutable.js-like mutation functions for plain objects",
   "sideEffects": false,
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jcoreio/mutate.git"
@@ -28,19 +23,34 @@
   },
   "homepage": "https://github.com/jcoreio/mutate#readme",
   "devDependencies": {
-    "@jedwards1211/js-toolchain": "^2.0.6",
-    "husky": "^4.3.0"
+    "@jcoreio/toolchain": "2.0.3",
+    "@jcoreio/toolchain-circle": "2.0.3",
+    "@jcoreio/toolchain-esnext": "2.0.3",
+    "@jcoreio/toolchain-mocha": "2.0.3",
+    "@jcoreio/toolchain-semantic-release": "2.0.3",
+    "@jcoreio/toolchain-typescript": "2.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.43.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.18.6",
     "iterall": "^1.1.3"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "toolchain test",
-    "prepublishOnly": "echo This package is meant to be published by semantic-release from the dist build directory. && exit 1",
     "tc": "toolchain",
-    "toolchain": "toolchain"
-  }
+    "toolchain": "toolchain",
+    "test": "toolchain test",
+    "prepublishOnly": "echo This package is meant to be published by semantic-release from the dist build directory. && exit 1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "packageManager": "pnpm@8.3.1"
 }

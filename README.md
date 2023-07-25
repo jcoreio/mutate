@@ -12,7 +12,7 @@ Beware of using Ramda.js! [It always returns a new object, even if nothing chang
 # Usage
 
 ```sh
-npm install --save @jcoreio/mutate
+pnpm install --save @jcoreio/mutate
 ```
 
 # API
